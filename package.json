@@ -1,0 +1,25 @@
+{
+  "name": "simplepopup",
+  "version": "0.0.1",
+  "description": "simplePopup is a js library to play with popups",
+  "main": "simplePopup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MUCHZER/simplePopup.git"
+  },
+  "author": "Léo GRAND <leograndcontact@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "popup",
+    "js",
+    "simple",
+    "window"
+  ],
+  "bugs": {
+    "url": "https://github.com/MUCHZER/simplePopup/issues"
+  },
+  "homepage": "https://github.com/MUCHZER/simplePopup#readme"
+}
