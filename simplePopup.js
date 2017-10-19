@@ -9,8 +9,8 @@
     "use strict";
 
     /**
-     * Affiche les erreurs
-     * @param {string} err - l'erreur a afficher
+     * Display errors
+     * @param {string} err - error to show
      */
     function errorDisplay(err) {
         window.console.error("simplePopup error: " + err);
@@ -18,9 +18,9 @@
     }
 
     /**
-     * Parse la valeur de taille de la popup
-     * @param {string} param - une valeur en pixel, % ou ratio
-     * @return {Object} - un obj contenant des infos sur la taille
+     * Parse value of popup size
+     * @param {string} param - value in pixel, % or ratio
+     * @return {Object} - object contains popup sizes
      */
     function parseSize(param) {
 
@@ -39,7 +39,7 @@
             result.isPixel = true;
             result.size = Number(size.slice(0, -2));
 
-            // Verifie que size est bien un nombre, si non, size est NaN
+            // check if size is a number
             if (result.size) {
                 return result;
             } else {
@@ -53,7 +53,7 @@
             result.isRatio = true;
             result.size = Number(size.slice(6));
 
-            // Verifie que size est bien un nombre, si non, size est NaN
+            // check if size is a number
             if (result.size) {
                 return result;
             } else {
@@ -67,7 +67,7 @@
             result.isPourcentage = true;
             result.size = Number(size.slice(0, -1));
 
-            // Verifie que size est bien un nombre, si non, size est NaN
+            // check if size is a number
             if (result.size) {
                 return result;
             } else {
@@ -75,12 +75,12 @@
             }
         }
 
-        /** Par default pixel */
+        /** default pixel */
         else {
             result.isPixel = true;
             result.size = Number(size);
 
-            // Verifie que size est bien un nombre, si non, size est NaN
+            // check if size is a number
             if (result.size) {
                 return result;
             } else {
@@ -91,10 +91,10 @@
 
 
     /**
-     * Transforme les valeurs demandé en pixel
-     * @param {string} width - largeur de la popup 
-     * @param {string} height - hauteur de la popup
-     * @return {Object} result - objet contenant la taille en pixel
+     * Transform values in pixel
+     * @param {string} width - width of popup 
+     * @param {string} height - height of popup
+     * @return {Object} result - object contain pixels size
      */
     function getPixel(width, height) {
 
@@ -141,9 +141,9 @@
     }
 
     /**
-     * Trouve l'ecran et position la popup
-     * @param {string} w - largeur de la popup
-     * @param {string} h - hauteur de la popup
+     * find screen and popup size
+     * @param {string} w - widht of popup
+     * @param {string} h - height of popup
      */
     function findCenter(w, h) {
         var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
@@ -162,9 +162,9 @@
     }
 
     /**
-     * Ouvre la popup
-     * @param {string} url - url de ouvrir dans la popup
-     * @param {Object} windowSize - size de la popup
+     * Open popup
+     * @param {string} url - url to open in popup
+     * @param {Object} windowSize - size of popup
      * @param {bool} centered
      */
     function windowOpener(url, windowSize, centered) {
@@ -178,7 +178,7 @@
 
     /**
      * Display errors
-     * @param {string} url - url a verifier
+     * @param {string} url - url to check
      * @return {bool} - false if error, true if valid
      */
     function validateParams(url) {
@@ -190,11 +190,11 @@
     }
 
     /**
-     * Ouvre une page dans une autre fenetre
-     * @param {string} url - url a ouvrir dans la popup
-     * @param {string} width - largeur de la popup (px, % ou ratio:)
-     * @param {string} height - hauteur de la popup (px, % ou ratio:)
-     * @param {bool} center - si vide ou true, la popup est centré
+     * Open a page in an other window
+     * @param {string} url - url to open in popup
+     * @param {string} width - width of popup (px, % ou ratio:)
+     * @param {string} height - height of popup (px, % ou ratio:)
+     * @param {bool} center - if null or true, popup is centered
      */
     function openWindow(url, width, height, center) {
 
@@ -211,7 +211,7 @@
     }
 
     /**
-     * Défini la lib et l'inject dans window
+     * define lib and inject in window
      * @return {Object}
      */
     function define() {
