@@ -25,5 +25,4 @@ simplePopup.openWindow("http://google.com/", "1080px", "50%");
 
 # TODO
 
-- Translate in english
 - Add stolen code credits (dual screen compatibility) :)
