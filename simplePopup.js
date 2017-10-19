@@ -18,9 +18,9 @@
     }
 
     /**
-     * Parse vlue of popup size
+     * Parse value of popup size
      * @param {string} param - value in pixel, % or ratio
-     * @return {Object} - object tonctains popups sizes
+     * @return {Object} - object contains popup sizes
      */
     function parseSize(param) {
 
@@ -190,7 +190,7 @@
     }
 
     /**
-     * Open a page in other window
+     * Open a page in an other window
      * @param {string} url - url to open in popup
      * @param {string} width - width of popup (px, % ou ratio:)
      * @param {string} height - height of popup (px, % ou ratio:)
